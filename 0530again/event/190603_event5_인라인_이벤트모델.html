@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      function whenClick(e) {
+        alert('인라인이벤트3 - 함수 호출');
+      }
+    </script>
+  </head>
+  <body>
+    <body>
+      <h1 onclick="alert('인라인이벤트1')">CLICK1</h1>
+      <h1 onclick="var alpha='인라인 이벤트 2 - 여러줄의 자바스크립트'; alert(alpha);">CLICK2</h1>
+      <h1 onclick="whenClick(event)">CLICK3</h1><!--이벤트객체전달-->
+  </body>
+  </body>
+</html>

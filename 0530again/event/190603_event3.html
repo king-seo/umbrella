@@ -1,0 +1,21 @@
+<html>
+<head>
+  <title>event</title>
+  <script type="text/javascript">
+    window.onload = function(){
+      document.getElementById('header').onclick = function(e){
+        //이벤트 객체 설정
+        var event = e || window.event;
+
+        document.body.innerHTML = '';
+        for (var key in event) {
+          document.body.innerHTML += '<p>' + key + ':' + event[key] + '</p>';
+        }
+      };
+    };
+  </script>
+</head>
+<body>
+  <h1 id="header">CLICK</h1>
+</body>
+</html>

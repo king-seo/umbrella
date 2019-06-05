@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      window.onload = function(){
+        //이벤트를 연결합니다.
+        document.getElementById('header').onclick = function(){
+          //이벤트발생을 알립니다.
+          alert('header');
+        };
+        document.getElementById('paragraph').onclick = function(e){
+          //이벤트 객체를 처리합니다.
+          var event = e || window.event;
+          //이벤트발생을 알립니다.
+          alert('paragraph');
+
+          //이벤트 전달을 제거합니다.
+          event.cancelBubble = true//익스플로러 브라우저용
+          if (even.stopPropagation){//익스에는 .stopPropagation()매서드가 없으므로 에러방지를위해 조건문으로 처리
+            even.stopPropagation();
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1 id="header">
+      <p id="paragraph">
+        Paragraph
+      </p>
+    </h1>
+  </body>
+</html>

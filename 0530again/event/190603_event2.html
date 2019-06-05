@@ -1,0 +1,17 @@
+<html>
+<head>
+  <title>event</title>
+  <script type="text/javascript">
+    window.onload = function(){
+      document.getElementById('header').onclick = function(){
+        alert(this);
+        this.style.color = 'orange';
+        this.style.backgroundColor = 'red'
+      };
+    };
+  </script>
+</head>
+<body>
+  <h1 id="header">CLICK</h1>
+</body>
+</html>

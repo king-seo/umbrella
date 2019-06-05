@@ -1,0 +1,41 @@
+<html>
+<head>
+  <title>event</title>
+  <script type="text/javascript">
+    window.onload = function(){
+        //문서 객체를 가져옵니다.
+        var buttonA = document.getElementById('button-a');
+        var buttonB = document.getElementById('button-b');
+        var counterA = document.getElementById('counter-a');
+        var counterB = document.getElementById('counter-b');
+
+        //이벤트를 연결합니다.
+/*
+        //ButtonA 클릭시 span태그안의 0이라는 글자를 숫자로 바꿔주고 counterA에 1을 더한다.
+        buttonA.onclick = function(){
+          counterA.innerHTML = Number(counterA.innerHTML) + 1;
+        };
+        //ButtonB 클릭시 counterB의 span태그 안의 0이라는 글자를 숫자로 바꿔주고 counterB에 1을 더한다.
+        //그리고 counterA의 span태그 안의 0이라는 글자를 숫자로 바꿔주고 counterA에 1을 더한다.
+        buttonB.onclick = function(){
+          counterB.innerHTML = Number(counterB.innerHTML) + 1;
+          counterA.innerHTML = Number(counterA.innerHTML) + 1;
+        };
+*/
+        buttonA.onclick = function(){
+          counterA.innerHTML = Number(counterA.innerHTML) + 1;
+        };
+        buttonB.onclick = function(){
+          counterB.innerHTML = Number(counterB.innerHTML) + 1;
+          buttonA.onclick(); //buttonA를 클릭시킴 그럼 위의 애가 작동함.ㅋㅋㅋ간단..
+        };
+    };
+  </script>
+</head>
+<body>
+  <button id = "button-a">ButtonA</button>
+  <button id = "button-b">ButtonB</button>
+  <h1>ButtonA - <span id = "counter-a">0</span></h1>
+  <h1>ButtonB - <span id = "counter-b">0</span></h1>
+</body>
+</html>

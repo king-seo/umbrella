@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  <style media="screen">
+    body{
+      background-color: #fbfaf9;
+    }
+    h1{
+      text-align: center;
+      height:150px;
+      background-color: rgb(23, 137, 145);
+      margin: 0;
+    }
+    section{
+
+    }
+    section>div{
+      margin: auto;
+      width: 640px;
+      background: white;
+      box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+      padding: 30px;
+      margin-top: -50px;
+    }
+    form{
+    }
+    input{
+      font-size:16px;
+    }
+    p{
+      border-top: 1px solid rgb(233, 233, 233);
+      padding-top: 30px;
+    }
+    h2{
+      color: rgb(45, 163, 171);
+      margin-top: 40px;
+      margin-bottom: 40px;
+      font-size: 2rem;
+    }
+    .noti{
+      margin: auto;
+      text-align: center;
+      width: 640px;
+      margin-top: 50px;
+      font-size: 0.8rem;
+      margin-bottom: 100px;
+    }
+  </style>
+  </head>
+  <body>
+    <h1></h1>
+    <section>
+      <div>
+        <h2>당신은 누구십니까?</h2>
+        <form action = "/cgi-bin/hello_get.cgi" method = "get">
+        <p>이름을 입력하세요.</p>
+          <input type="text" placeholder="홍길동" maxlength="5">
+        <p>당싱의 연령대는 어떻게 되나요?</p>
+          <input type="number" name="age" min="0" max="80" step="10" value="30" />대
+        <p>생일을 알려주세요</p>
+          <input type="date" name="bday">
+        <p>성별을 알려주세요</p>
+          <input type="radio" name="gender" value="남자" checked>남자<br />
+          <input type="radio" name="gender" value="여자">여자<br />
+          <input type="radio" name="gender" value="그외">그외<br />
+        <p>당신이 즐겨쓰는 SNS를 골라주세요.<span style="text-decoration:underline;color:gray;">중복 선택 가능</span></p>
+          <input type="checkbox" name="favorit" value="페이스북">페이스북<br />
+          <input type="checkbox" name="favorit" value="인스타그램">인스타그램<br />
+          <input type="checkbox" name="favorit" value="유투브">유투브<br />
+        <p>간단한 소개글을 부탁해요.</p>
+          <textarea name="inroduce" placeholder="간략하게 입력하세요(100자이내)" style="width:634px;height:200px;font-size:1rem;"></textarea>
+        <br />
+        <input type="button" value="제출하기" onclick="alert('제출했습니다. 감사합니다.')">
+        </form>
+      </div>
+
+    </section>
+    <div class="noti">
+      <a href="">개인정보 취급방침</a>에 따라 고객 정보를 매칭하기 위해 수집하는 것으로 이외에는 사용되지 않습니다.
+    </div>
+  </body>
+</html>

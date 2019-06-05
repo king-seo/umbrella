@@ -12,9 +12,43 @@
   gtag('js', new Date());
   gtag('config', 'UA-134942493-1');
   </script>
+  <script>
+    function nightDayHandler(self){
+      var target = document.querySelector('body');
+      if(self.value === 'night'){
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        self.value = 'day';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = 'red';
+          i = i + 1;
+        }
+      }else{
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        self.value = 'night';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = 'blue';
+          i = i + 1;
+        }
+      }
+    }
+  </script>
 </head>
 <body>
   <h1><a href="index.html">The Umbrella Academy (TV series)</a></h1>
+  <input id="toggle" type="button" value="night" onclick="
+    nightDayHandler(this);
+  ">
+  <input id="toggle" type="button" value="night" onclick="
+    nightDayHandler(this);
+  ">
   <div id="grid">
     <div>
       <ol>
@@ -29,7 +63,7 @@
         <p>Peter Hoar	Jeremy Slater	February 15, 2019</p>
         <p>Forty-three babies are born simultaneously to women who weren't pregnant immediately prior to each birth. Seven are adopted by eccentric billionaire Sir Reginald Hargreeves, who turns them into a superhero team. Years later, Hargreeves’ children - each known numerically rather than by name - reluctantly reunite for his funeral. Number One ("Luther") suspects that Hargreeves died of foul play, because the monocle that he always wore is missing. Shortly after the children all arrive at the family home, Number Five appears in a strange ball of blue energy. He claims to have returned from the future and into his prepubescent body, despite being fifty-eight years old. At the funeral, it becomes clear that the children's android "mother," Grace, isn't coping well with Reginald's death. Tensions emerge among the children, and Diego (“Number Two”) gets into a fight with Luther that destroys a statue of their dead brother, Ben. Later, Five is visiting his favorite doughnut shop when several armed men enter and open fire. After killing the men, he removes a tracker embedded in his arm. Elsewhere, it’s revealed that Klaus can talk to Ben’s ghost. Five arrives at Vanya's apartment and warns his estranged sister that the world will end in eight days.
         </p>
-      </div>
+    </div>
   </div>
 </body>
 </html>
